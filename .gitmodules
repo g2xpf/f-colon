@@ -1,0 +1,3 @@
+[submodule "ecs-rs"]
+	path = ecs-rs
+	url = git@github.com:g2xpf/ecs-rs.git
