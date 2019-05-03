@@ -22,9 +22,11 @@ fn main() {
 
     world.push_global_resource(RenderContext::new(display));
     world.push_global_resource(EventContext::new(events_loop));
+    world.push_global_resource(WorldStatus::new());
 
     world.register_system::<ClearColor>();
     world.register_system::<Finalize>();
+    world.register_system::<PollEvents>();
 
     world.run();
 }
