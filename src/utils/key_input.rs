@@ -1,7 +1,14 @@
 use super::KeyCode;
+use std::fmt;
 
 pub struct KeyInput {
     key_code: KeyCode,
+}
+
+impl fmt::Debug for KeyInput {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "KeyInput: {:?}", self.key_code)
+    }
 }
 
 impl KeyInput {
